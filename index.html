@@ -21,8 +21,6 @@
             --badge-bg: rgba(0, 180, 255, 0.1);
             --text-white: #ffffff;
             --text-gray: #9ca3af;
-            --whatsapp-bg: #064e3b;
-            --whatsapp-text: #34d399;
             --transition: all 0.3s ease;
         }
 
@@ -281,7 +279,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* הוחזר ל-3 עמודות לגודל המקורי */
+            grid-template-columns: repeat(3, 1fr);
             gap: 30px;
         }
 
@@ -522,26 +520,6 @@
             flex-shrink: 0;
         }
 
-        .whatsapp-box {
-            background: rgba(6, 78, 59, 0.3);
-            border: 1px solid var(--whatsapp-bg);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .whatsapp-box:hover {
-            background: rgba(6, 78, 59, 0.5);
-        }
-
-        .whatsapp-box .info-box-content p {
-            color: var(--whatsapp-text);
-        }
-
-        .whatsapp-box .info-icon {
-            background: var(--whatsapp-bg);
-            color: var(--whatsapp-text);
-        }
-
         /* --- Footer --- */
         footer {
             border-top: 1px solid var(--border-color);
@@ -646,7 +624,7 @@
             <div class="services-grid">
 
                 <div class="service-card">
-                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1593640408182-31c70c8268f5?q=80&w=1000&auto=format&fit=crop');"></div>
+                    <div class="card-img" style="background-image: url('https://images.unsplash.com/photo-1588508065123-287b28e013da?q=80&w=1000&auto=format&fit=crop');"></div>
                     <div class="card-content">
                         <div class="card-icon"><i class="fa-solid fa-microchip"></i></div>
                         <h3>מחשבים</h3>
@@ -759,13 +737,6 @@
                         <div class="info-icon"><i class="fa-regular fa-clock"></i></div>
                     </div>
 
-                    <div class="info-box whatsapp-box" onclick="window.open('https://wa.me/972583521536', '_blank')">
-                        <div class="info-box-content">
-                            <h4>שלחו הודעה בוואטסאפ</h4>
-                            <p style="font-size: 0.9rem; font-weight: 400;">מענה מהיר תוך דקות</p>
-                        </div>
-                        <div class="info-icon"><i class="fa-brands fa-whatsapp"></i></div>
-                    </div>
                 </div>
 
                 <!-- Form (Left) -->
