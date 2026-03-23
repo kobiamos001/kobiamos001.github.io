@@ -157,11 +157,24 @@
         }
 
         /* --- Product Info --- */
+        .product-info h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            letter-spacing: -1px;
+        }
+
+        .product-info h1 span {
+            color: var(--primary-blue);
+            text-shadow: 0 0 30px rgba(0, 180, 255, 0.4);
+        }
+
         .badges-area {
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 40px;
         }
 
         .badge {
@@ -183,19 +196,6 @@
             border-color: rgba(239, 68, 68, 0.2);
         }
 
-        .product-info h1 {
-            font-size: 4rem;
-            font-weight: 900;
-            line-height: 1.1;
-            margin-bottom: 40px;
-            letter-spacing: -1px;
-        }
-
-        .product-info h1 span {
-            color: var(--primary-blue);
-            text-shadow: 0 0 30px rgba(0, 180, 255, 0.4);
-        }
-
         /* --- Detail Cards (יוקרתי כמו בדף הראשי) --- */
         .details-section {
             display: flex;
@@ -213,25 +213,11 @@
             transition: var(--transition);
         }
 
+        /* מעבר עכבר - מסגרת אחידה והילה כחולה יוקרתית */
         .detail-card:hover {
             border-color: var(--primary-blue);
             transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 180, 255, 0.05);
-        }
-
-        /* פס כחול עדין בצד ימין של הכרטיסייה */
-        .detail-card::before {
-            content: '';
-            position: absolute;
-            top: 0; right: 0;
-            width: 4px; height: 100%;
-            background: var(--primary-blue);
-            opacity: 0;
-            transition: var(--transition);
-        }
-
-        .detail-card:hover::before {
-            opacity: 1;
+            box-shadow: 0 5px 20px rgba(0, 180, 255, 0.15);
         }
 
         .card-header {
@@ -407,6 +393,9 @@
                 <!-- צד שמאל: פרטי המוצר המלאים -->
                 <div class="product-info">
                     
+                    <h1>נגן HPower <span>Z80</span></h1>
+
+                    <!-- הבועות ממוקמות עכשיו מתחת לכותרת -->
                     <div class="badges-area">
                         <div class="badge">
                             הגרסה הטובה ביותר בשוק
@@ -415,8 +404,6 @@
                             <i class="fa-solid fa-circle-xmark"></i> אזל מהמלאי
                         </div>
                     </div>
-
-                    <h1>נגן HPower <span>Z80</span></h1>
                     
                     <div class="details-section">
                         
