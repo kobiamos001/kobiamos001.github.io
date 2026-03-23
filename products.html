@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>חנות - נגן HPower Z80</title>
+    <title>מוצרים - נגן HPower Z80</title>
     <!-- פונט Heebo -->
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- אייקונים FontAwesome -->
@@ -20,6 +20,7 @@
             --text-white: #ffffff;
             --text-gray: #9ca3af;
             --success: #10b981;
+            --danger: #ef4444; /* צבע אדום למצב חוסר במלאי */
             --purple: #a855f7;
             --transition: all 0.3s ease;
         }
@@ -109,7 +110,7 @@
             display: grid;
             grid-template-columns: 1fr 1.2fr;
             gap: 60px;
-            align-items: start; /* שונה מ-center כדי שהקופסאות יתיישרו יפה למעלה */
+            align-items: start;
         }
 
         /* תמונת המוצר */
@@ -171,18 +172,22 @@
             box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
         }
         
-        .best-version-badge i { color: #facc15; } /* צבע זהב לכתר */
+        .best-version-badge i { color: #facc15; }
 
         /* סטטוס מלאי */
         .stock-status {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            color: var(--success);
             font-weight: 500;
             font-size: 1rem;
             margin-bottom: 25px;
             margin-right: 15px;
+            color: var(--danger); /* שונה לאדום */
+            background: rgba(239, 68, 68, 0.1); /* רקע אדום עדין */
+            padding: 5px 15px;
+            border-radius: 50px;
+            border: 1px solid rgba(239, 68, 68, 0.2);
         }
 
         /* קופסאות פרטים */
@@ -211,9 +216,9 @@
             padding-bottom: 10px;
         }
         
-        .box-specs h3 i { color: #3b82f6; } /* כחול */
-        .box-features h3 i { color: #10b981; } /* ירוק */
-        .box-upgrades h3 i { color: #a855f7; } /* סגול */
+        .box-specs h3 i { color: #3b82f6; }
+        .box-features h3 i { color: #10b981; }
+        .box-upgrades h3 i { color: #a855f7; }
 
         .feature-list {
             display: grid;
@@ -348,8 +353,9 @@
                         <i class="fa-solid fa-crown"></i> הגרסה הטובה ביותר בשוק
                     </div>
                     
+                    <!-- סטטוס מלאי שונה לאזל מהמלאי -->
                     <span class="stock-status">
-                        <i class="fa-solid fa-circle-check"></i> זמין במלאי
+                        <i class="fa-solid fa-circle-xmark"></i> אזל מהמלאי
                     </span>
 
                     <!-- קטגוריה 1: מפרט טכני -->
@@ -369,10 +375,12 @@
                         <h3><i class="fa-solid fa-star"></i> תכונות המכשיר</h3>
                         <ul class="feature-list">
                             <li><i class="fa-solid fa-store"></i> חנות אפליקציות אופליין מתקדמת עם 150 אפליקציות ומשחקים פופולארים</li>
-                            <li><i class="fa-solid fa-radio"></i> רדיו כשר (ללא צורך באינטרנט)</li>
+                            <li><i class="fa-solid fa-radio"></i> רדיו כשר (רק התחנות החרדיות)</li>
                             <li><i class="fa-solid fa-video-slash"></i> מנגנון בלעדי לחסימת וידיאו עם התקנת אפליקציות פתוחה</li>
                             <li><i class="fa-solid fa-shield-halved"></i> מנגנון ייחודי למניעת פריצה והחלפת גירסה</li>
-                            <li><i class="fa-solid fa-ban"></i> ללא אינטרנט כלל - חסום ובטוח לחלוטין</li>
+                            <li><i class="fa-solid fa-ban"></i> ללא אינטרנט כלל</li>
+                            <!-- התכונה החדשה שהתווספה -->
+                            <li><i class="fa-solid fa-sliders"></i> אפשרות להתאמה אישית של הגרסה</li>
                         </ul>
                     </div>
 
@@ -381,8 +389,10 @@
                         <h3><i class="fa-solid fa-wand-magic-sparkles"></i> שדרוגים מיוחדים</h3>
                         <ul class="feature-list" style="grid-template-columns: 1fr 1fr;">
                             <li><i class="fa-solid fa-lock"></i> נעילת קו וקוד</li>
-                            <li><i class="fa-solid fa-palette"></i> ערכות נושא מרהיבות</li>
-                            <li><i class="fa-solid fa-hand-pointer"></i> מחוות, לחצני צילום וסיבוב מסך</li>
+                            <li><i class="fa-solid fa-palette"></i> ערכות נושא</li>
+                            <!-- המחוות והלחצנים פוצלו לשניים -->
+                            <li><i class="fa-solid fa-hand-pointer"></i> מחוות</li>
+                            <li><i class="fa-solid fa-camera-rotate"></i> לחצני צילום וסיבוב מסך</li>
                             <li><i class="fa-solid fa-folder-plus"></i> הוספת ווידג'טים ותיקיות</li>
                         </ul>
                     </div>
@@ -395,8 +405,9 @@
                             </div>
                             <div class="price-subtitle">בלבד! מחיר ללא תחרות</div>
                         </div>
+                        <!-- אייקון הוואטסאפ הוסר מהכפתור -->
                         <a href="index.html#contact" class="btn-buy">
-                            <i class="fa-brands fa-whatsapp"></i> להזמנה עכשיו
+                            להזמנה עכשיו
                         </a>
                     </div>
 
