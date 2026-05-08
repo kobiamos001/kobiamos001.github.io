@@ -310,15 +310,17 @@
             color: var(--text-white);
         }
 
-        /* אזור הבועות מסודר מתחת לטקסט */
+        /* --- אזור הבועות מסודר למטה בצורה אחידה --- */
         .app-tags { 
             display: flex; 
             flex-wrap: wrap; 
             gap: 8px; 
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            margin-top: auto; /* דוחף את אזור הבועות לחלק התחתון של הכרטיסייה */
+            min-height: 70px; /* משריין גובה קבוע ל-2 שורות של בועות ככה שכולם יהיו באותו גובה בדיוק */
+            align-content: flex-start; /* הבועות נצמדות למעלה בתוך אזור ה-70px המוגדר */
             position: relative; 
             z-index: 2; 
-            align-content: flex-start;
         }
 
         .tag {
@@ -331,13 +333,11 @@
             font-weight: 500;
         }
 
-        /* דוחף את אזור הגרסה והכפתור באופן קבוע לתחתית הריבוע */
         .app-version {
             text-align: center;
             color: var(--text-gray);
             font-size: 0.95rem;
             margin-bottom: 12px;
-            margin-top: auto; /* זה מה שמיישר אותם למטה ומשאיר את הבועות למעלה */
             font-weight: 500;
             position: relative; z-index: 2;
         }
