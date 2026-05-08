@@ -22,7 +22,7 @@
             --text-white: #ffffff;
             --text-gray: #9ca3af;
             --success-green: #10b981;
-            --warning-yellow: #fbbf24; /* צבע צהוב לאפליקציות בתשלום */
+            --warning-yellow: #fbbf24;
             --transition: all 0.3s ease;
         }
 
@@ -213,7 +213,7 @@
         .app-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            grid-auto-rows: 1fr; /* מכריח את כל הריבועים להיות באותו גובה בדיוק */
+            grid-auto-rows: 1fr; /* מכריח את כל הריבועים להיות באותו גובה בכל המסכים */
             gap: 30px;
             padding: 80px 0;
         }
@@ -224,7 +224,7 @@
             border-radius: 20px;
             padding: 35px;
             display: flex;
-            flex-direction: column; /* מאפשר סידור פנימי גמיש */
+            flex-direction: column;
             transition: var(--transition);
             position: relative;
             overflow: hidden;
@@ -290,7 +290,8 @@
             color: var(--text-gray);
             font-size: 1rem;
             margin-bottom: 12px;
-            position: relative; z-index: 2;
+            position: relative; 
+            z-index: 2;
         }
 
         /* עיצוב הקישור למידע נוסף */
@@ -299,7 +300,7 @@
             text-decoration: underline;
             font-size: 0.95rem;
             font-weight: 500;
-            margin-bottom: 25px;
+            margin-bottom: 15px;
             align-self: flex-start;
             position: relative; z-index: 2;
             transition: var(--transition);
@@ -309,13 +310,12 @@
             color: var(--text-white);
         }
 
-        /* אזור הבועות - דוחף את עצמו ואת מה שתחתיו לתחתית הריבוע */
+        /* אזור הבועות מסודר מתחת לטקסט */
         .app-tags { 
             display: flex; 
             flex-wrap: wrap; 
             gap: 8px; 
-            margin-bottom: 30px; 
-            margin-top: auto; /* זה מה שמיישר הכל לתחתית ויוצר מראה אחיד */
+            margin-bottom: 30px;
             position: relative; 
             z-index: 2; 
             align-content: flex-start;
@@ -331,11 +331,13 @@
             font-weight: 500;
         }
 
+        /* דוחף את אזור הגרסה והכפתור באופן קבוע לתחתית הריבוע */
         .app-version {
             text-align: center;
             color: var(--text-gray);
             font-size: 0.95rem;
             margin-bottom: 12px;
+            margin-top: auto; /* זה מה שמיישר אותם למטה ומשאיר את הבועות למעלה */
             font-weight: 500;
             position: relative; z-index: 2;
         }
@@ -382,7 +384,7 @@
             .hero h1 { font-size: 2.5rem; }
             .hero p { font-size: 1rem; }
             
-            .app-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
+            .app-grid { grid-template-columns: 1fr; }
             .footer-content { flex-direction: column-reverse; gap: 20px; text-align: center; }
         }
     </style>
@@ -426,7 +428,7 @@
                 <i class="fa-solid fa-cloud-arrow-down"></i> מרכז הורדות
             </div>
             <h1>האפליקציות <span>שלנו</span></h1>
-            <p>כל הכלים זמינים להורדה ישירה, עם דגש על הטכנולגיה המתקדמת ביותר בהגנה מקסימלית וחווית משתמש נקייה, שפותחו בהתאמה אישית.</p>
+            <p>כל הכלים זמינים להורדה בחינם, עם דגש על הטכנולגיה המתקדמת ביותר בהגנה מקסימלית וחווית משתמש נקייה, שפותחו בהתאמה אישית.</p>
         </div>
     </section>
 
@@ -445,7 +447,7 @@
                     </div>
                 </div>
                 <p class="app-description">
-                    אפליקציה מתקדמת לביטול נעילת המכשיר ע"י זיהוי פנים במכשירים ללא זיהוי פנים מובנה.
+                    אפליקציה מתקדמת לביטול נעילת המכשיר עי זיהוי פנים במכשירים ללא זיהוי פנים מובנה.
                 </p>
                 <div class="app-tags">
                     <span class="tag">מובנה במערכת</span>
@@ -466,7 +468,7 @@
                     </div>
                 </div>
                 <p class="app-description">
-                    אפליקצית סינון וחסימת מכשירים מבוססת MDM , רשימה לבנה של אתרים ואפליקציות, חסימת פרסומות ודפדפנים פנימיים, חסימה והשבתת אפליקציות.
+                    אפליקצית סינון וחסימת מכשירים מבוססת MDM עם רשימה לבנה של אתרים ואפליקציות חסימת פרסומות ודפדפנים פנימיים.
                 </p>
                 <div class="app-tags">
                     <span class="tag">מבוסס MDM</span>
@@ -487,11 +489,11 @@
                     </div>
                 </div>
                 <p class="app-description">
-                    חנות אפליקציות מתקדמת אופליין. כולל תמיכה בהרחבות חיצוניות, גיבוי ושחזור נתונים, מנוע חיפוש מתקדם והתקנה אוטומטית.
+                    חנות אפליקציות מתקדמת אופליין כולל תמיכה בהרחבות חיצוניות גיבוי ושחזור נתונים מנוע חיפוש מתקדם התקנה אוטומטית ומהירה.
                 </p>
                 <div class="app-tags">
                     <span class="tag">אופליין</span>
-                    <span class="tag">אוטומטית</span>
+                    <span class="tag">אוטומטי</span>
                     <span class="tag">מהירה</span>
                 </div>
                 <div class="app-version">גרסה אחרונה: <span>V4.0</span></div>
@@ -586,7 +588,7 @@
                     <span class="tag">לא ניתן לעקיפה</span>
                 </div>
                 <div class="app-version">גרסה אחרונה: <span>V2.3</span></div>
-                <a href="Vidblocker.apk" download class="btn btn-primary download-btn">להורדה <i class="fa-solid fa-download"></i></a>
+                <a href="VidBlocker.apk" download class="btn btn-primary download-btn">להורדה <i class="fa-solid fa-download"></i></a>
             </div>
 
         </div>
