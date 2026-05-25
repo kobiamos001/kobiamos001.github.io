@@ -153,12 +153,13 @@
             font-size: 0.9rem;
         }
 
-        /* --- עיצוב כותרת הדף העליונה (כמו במסך הראשי) --- */
+        /* --- עיצוב כותרת הדף העליונה (מותאם לאנדרואיד) --- */
         .page-header {
             position: relative;
             padding: 160px 0 80px;
+            /* רקע אנדרואיד / טכנולוגי כהה חדש */
             background: linear-gradient(to right, rgba(11, 14, 20, 1) 0%, rgba(11, 14, 20, 0.7) 100%), 
-                        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070&auto=format&fit=crop') center/cover;
+                        url('https://images.unsplash.com/photo-1607252650355-f7fd0460ccdb?q=80&w=2070&auto=format&fit=crop') center/cover;
             text-align: center;
             border-bottom: 1px solid var(--border-color);
         }
@@ -176,13 +177,13 @@
             z-index: 2;
         }
 
-        .page-header h1 {
+        .page-header-title {
             font-size: 3.8rem;
             font-weight: 900;
             margin-bottom: 15px;
         }
 
-        .page-header h1 span {
+        .page-header-title span {
             color: var(--primary-blue);
             text-shadow: 0 0 30px rgba(0, 180, 255, 0.4);
         }
@@ -383,13 +384,18 @@
             nav a { font-size: 0.9rem; }
 
             .page-header { padding: 130px 0 40px; }
-            .page-header h1 { font-size: 2.8rem; }
+            .page-header-title { font-size: 2.8rem; }
             .products-grid { grid-template-columns: 1fr; }
             .footer-content { flex-direction: column-reverse; gap: 20px; text-align: center; }
         }
     </style>
 </head>
 <body>
+
+    <!-- כותרת מוסתרת לטובת קידום בגוגל (SEO) - לא נראית בתצוגה -->
+    <h1 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;">
+        נגני אנדרואיד עם הגרסאות הטובות ביותר במחיר הזול ביותר - HPower Z80, HPower M36, HPower M393
+    </h1>
 
     <!-- Header (ניווט - תואם לחלוטין למסך הראשי) -->
     <header id="header">
@@ -421,10 +427,10 @@
         </div>
     </header>
 
-    <!-- כותרת העמוד (עם תמונת רקע כמו במסך הראשי) -->
+    <!-- כותרת העמוד -->
     <section class="page-header">
         <div class="container">
-            <h1>המוצרים <span>שלנו</span></h1>
+            <h2 class="page-header-title">המוצרים <span>שלנו</span></h2>
             <p>מכשירי אנדרואיד מתקדמים, חסומים ובטוחים לשימוש בגרסאות פרימיום בהתאמה אישית.</p>
         </div>
     </section>
@@ -458,8 +464,8 @@
                             <h4><i class="fa-solid fa-star"></i> תכונות מיוחדות</h4>
                             <ul>
                                 <li><i class="fa-solid fa-store"></i> חנות עם 140 אפליקציות ומשחקים.</li>
-                                <li><i class="fa-solid fa-video-slash"></i> <b>VidBlocker</b> - חסימת וידיאו בלעדית עם התקנת אפליקציות פתוחה.</li>
-                                <li><i class="fa-solid fa-face-smile-scan"></i> זיהוי פנים מובנה.</li>
+                                <li><i class="fa-solid fa-video-slash"></i> חסימת וידיאו בלעדית עם התקנת אפליקציות פתוחה.</li>
+                                <li><i class="fa-solid fa-user-lock"></i> זיהוי פנים מובנה.</li>
                                 <li><i class="fa-solid fa-shield-halved"></i> מנגנון חזק וייחודי נגד פריצות.</li>
                                 <li><i class="fa-solid fa-sliders"></i> גרסה חלקה בהתאמה אישית ללא באגים.</li>
                             </ul>
@@ -497,7 +503,7 @@
                             <h4><i class="fa-solid fa-star"></i> תכונות מיוחדות</h4>
                             <ul>
                                 <li><i class="fa-solid fa-store"></i> חנות עם 140 אפליקציות ומשחקים.</li>
-                                <li><i class="fa-solid fa-video-slash"></i> <b>VidBlocker</b> - חסימת וידיאו בלעדית עם התקנת אפליקציות פתוחה.</li>
+                                <li><i class="fa-solid fa-video-slash"></i> חסימת וידיאו בלעדית עם התקנת אפליקציות פתוחה.</li>
                                 <li><i class="fa-solid fa-shield-halved"></i> מנגנון חזק וייחודי נגד פריצות.</li>
                                 <li><i class="fa-solid fa-sliders"></i> גרסה חלקה בהתאמה אישית ללא באגים.</li>
                             </ul>
@@ -535,7 +541,7 @@
                             <h4><i class="fa-solid fa-star"></i> תכונות מיוחדות</h4>
                             <ul>
                                 <li><i class="fa-solid fa-store"></i> חנות עם 150 אפליקציות ומשחקים.</li>
-                                <li><i class="fa-solid fa-video-slash"></i> <b>VidBlocker</b> - חסימת וידיאו בלעדית עם התקנת אפליקציות פתוחה.</li>
+                                <li><i class="fa-solid fa-video-slash"></i> חסימת וידיאו בלעדית עם התקנת אפליקציות פתוחה.</li>
                                 <li><i class="fa-solid fa-radio"></i> רדיו כשר ייחודי (תחנות חרדיות בלבד).</li>
                                 <li><i class="fa-solid fa-shield-halved"></i> מנגנון חזק וייחודי נגד פריצות.</li>
                                 <li><i class="fa-solid fa-sliders"></i> גרסה חלקה בהתאמה אישית ללא באגים.</li>
